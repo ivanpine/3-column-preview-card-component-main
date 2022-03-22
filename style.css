@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+    --font-header: 'Big Shoulders Display', cursive;
+    --font-paragraph-button: 'Lexend Deca', sans-serif;
+    --clr-1-orange: hsl(31, 77%, 52%);
+    --clr-2-dark_cyan:  hsl(184, 100%, 22%);
+    --clr-3-very_dark_cyan: hsl(179, 100%, 13%);
+    --clr-p-transparent_white:  hsla(0, 0%, 100%, 0.75);
+    --clr-bg-h-b-very_light_gray:  hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-bg-h-b-very_light_gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    max-width: 940px;
+    margin: 1rem;
+}
+
+.sedans {
+    background-color: var(--clr-1-orange);
+    border-radius: 10px 0 0 10px;
+    padding: 3rem;
+}
+
+.suvs {
+    background-color: var(--clr-2-dark_cyan);
+    padding: 3rem;
+}
+
+.luxury {
+    background-color: var(--clr-3-very_dark_cyan);
+    border-radius: 0 10px 10px 0;
+    padding: 3rem;
+}
+
+.container h1 {
+    color: var(--clr-bg-h-b-very_light_gray);
+    font-family: var(--font-header);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.container p {
+    color: var(--clr-p-transparent_white);
+    font-family: var(--font-paragraph-button);
+    margin-bottom: 5rem;
+    line-height: 1.6rem;
+}
+
+img { 
+    margin-bottom: 2rem;
+}
+
+button {
+    font-family: var(--font-paragraph-button);
+    font-size: 0.9rem;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    border: none;
+    border: 2px transparent solid;
+}
+
+.button-sedans { color: var(--clr-1-orange); }
+.button-suvs { color: var(--clr-2-dark_cyan); }
+.button-luxury { color: var(--clr-3-very_dark_cyan); }
+
+button:hover {
+    cursor: pointer;
+    color: var(--clr-bg-h-b-very_light_gray);
+    border: 2px solid var(--clr-bg-h-b-very_light_gray);
+    background-color: transparent;
+}
+
+@media (max-width: 440px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+    }
+
+    .sedans {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .luxury {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .container p {
+        margin-bottom: 2rem;
+    }
+}
